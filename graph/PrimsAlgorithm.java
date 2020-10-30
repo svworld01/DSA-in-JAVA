@@ -1,3 +1,31 @@
+/*
+INPUT-->
+9 14 //#vertices #edges
+0 1 4 //#src dest weight
+0 7 8
+1 2 8
+1 7 11
+2 8 2
+2 5 4
+2 3 7
+3 4 9
+3 5 14
+4 5 10
+6 8 6
+6 5 2
+6 7 1
+7 8 7
+OUTPUT:-
+0 --> 1
+1 --> 2
+2 --> 3
+3 --> 4
+2 --> 5
+5 --> 6
+6 --> 7
+2 --> 8
+Total Weight : 37
+*/
 import java.util.*;
 
 public class PrimsAlgorithm{
