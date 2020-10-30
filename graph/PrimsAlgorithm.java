@@ -17,12 +17,12 @@ INPUT-->
 7 8 7
 OUTPUT:-
 0 --> 1
-1 --> 2
+5 --> 2
 2 --> 3
 3 --> 4
-2 --> 5
-5 --> 6
-6 --> 7
+6 --> 5
+7 --> 6
+0 --> 7
 2 --> 8
 Total Weight : 37
 */
@@ -97,15 +97,11 @@ public class PrimsAlgorithm{
                 if(!mst[adjEdge.dest] && key[adjEdge.dest] > adjEdge.weight){
                     key[adjEdge.dest] = adjEdge.weight;
                     parent[adjEdge.dest] = pair.vertex;
+                    pq.offer(new Pair(adjEdge.dest, key[adjEdge.dest]));
                 }
             }
-            pq = new PriorityQueue<>();
-            for(int i=0; i<v; i++){
-                if(!mst[i])
-                    pq.add(new Pair(i, key[i]));
-            }
         }
-        //resul edges
+        //result edges
         System.out.println("RESULT _____>");
         int totalWeight = 0;
         for(int i=1; i<v; i++){
