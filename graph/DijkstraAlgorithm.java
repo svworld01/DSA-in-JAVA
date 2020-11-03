@@ -1,4 +1,19 @@
 //single source shortest path using Dijkstra's Algorithm.
+/*
+INPUT:
+6 8
+0 1 2
+0 2 4
+1 2 1
+1 3 7
+2 4 3
+3 4 2
+3 5 1
+4 5 5
+OUTPUT:
+Cost : [0, 2, 3, 8, 6, 9]
+Parent : [-1, 0, 1, 4, 2, 3]
+*/
 import java.util.*;
 public class DijkstraAlgorithm {
     static class Edge implements Comparable<Edge>{
@@ -70,7 +85,7 @@ public class DijkstraAlgorithm {
                 }
             }
         }
-        System.out.println("Distance : "+Arrays.toString(dist));
+        System.out.println("Cost : "+Arrays.toString(dist));
         System.out.println("Parent : "+Arrays.toString(parent));
     }
 }
