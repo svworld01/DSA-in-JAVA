@@ -5,7 +5,7 @@ import java.util.*;
 public class BipartiteGraph 
 {  
 	public static boolean isBipartite(int G[][],int src) { 
-        int V = G.length;
+        	int V = G.length;
 		int colorArr[] = new int[V]; 
 		for (int i=0; i<V; ++i) 
 			colorArr[i] = -1; 
